@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import InputField from "./components/inputField";
+import { Todo } from "./model";
+import { Main } from "./components/Main";
+import { Navbar } from "./components/Navbar";
 
-function App() {
+/* export const App = () => {
+  const [todo, setTodo] = useState<string>("asdfgn");
+  const [todos, setTodos] = useState<Todo[]>([]);
+
+  console.log(todo,'todo');
+  console.log(setTodo)
+
+  const handleAdd = () => {};
+  console.log(todo);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <span className="heading">Taskify</span>
+      <InputField todo={todo} setTodo={setTodo} />
+    </div>
+  );
+}; */
+
+export const App = () => {
+  return (
+    <div className="Front">
+      <header>
+        <Navbar />
+        <Main />
       </header>
     </div>
   );
-}
-
-export default App;
+};
